@@ -1,0 +1,4 @@
+docker-compose up -d
+docker-compose down
+docker rmi mc1-temp-consumers mc1-temp-producer mc1-temp-consumer-1 mc1-temp-consumer-2 mc1-temp-consumer-3 mc1-temp-consumer-4
+docker volume prune
