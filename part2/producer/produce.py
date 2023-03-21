@@ -8,5 +8,6 @@ channel = connection.channel()
 channel.queue_declare(queue='hello')
 
 channel.basic_publish(exchange='', routing_key='hello', body='Hello World!')
+# Meiner Auffassung nach ist die Idee, dass du die Producer und Consumer aus dem Part 1 mit pika nachbaust. 
 print(" [x] Sent 'Hello World!'")
 connection.close()
