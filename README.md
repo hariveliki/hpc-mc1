@@ -32,10 +32,10 @@ Note, the Docker Compose file available in the repository contains more containe
 
 6. Write a data processor and a data sink. The data processor should regularly read and process the data from the data generators. E.g., a calculation or a machine learning application on the retrieved data; a data enrichment; or the extraction of information from the message. Then the processor sends the data to a data sink. In the data sink the data is stored, e.g. in a CSV file. Use appropriate Kafka components and meaningful names of functions, variables, etc. for the implementation. 
 <br /> **ANSWER HARIS**: <br />
-**The data processor loops through the messages and manipulates the data structure (dictionary). He calculates the n-th fibonacci number recursively and changes the value of the dictionary. I integrated a stop after n message because the runtime takes to long. **
+**The data processor loops through the messages and manipulates the data structure (dictionary). He calculates the n-th fibonacci number recursively and changes the value of the dictionary. I integrated a stop after n message because the runtime takes to long.**
 
 1. Draw an overview of your application components including interfaces and data flows, for example using a component diagram. Answer the following questions and interpret your experiments or results: 
-
+![Component Diagram](./part1/application-overview.drawio.png)
       * What are the tasks of the components?**ANSWER HARIS**<br />
       * **There are two jupyter notebooks, which are producing and consuming data. between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.**
       * Which interfaces do the components have?**ANSWER HARIS**<br />
@@ -54,9 +54,9 @@ Use other serializers/deserializers instead of JSON for the messages.
 <br /> **ANSWER HARIS**: **I used RabbitMQ as communication framework and publish subscribe as the communication pattern**
     
 2. Pack your rewritten application into containers.
-<br /> **ANSWER HARIS**: **See producer-mc1-part2/Dockerfile, receiver-mc1-part2/Dockerfile and the docker-compose-mc1-part2.yml**
+<br /> **ANSWER HARIS**: **See part2/docker-compose.yml**
 
-3. Answer the following questions and interpret your experiments or results: 
+1. Answer the following questions and interpret your experiments or results: 
       * Which communication pattern is used by Kafka?
        **ANSWER HARIS: Kafka uses publish pull as their communication pattern. On one side is a producer who generates data and on the other site is a consumer which pulls this data**
       * What is the difference compared to your choosen pattern?
