@@ -86,4 +86,5 @@ services:
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
   
 
+# Maybe create docker containers for each producer/consumer
       

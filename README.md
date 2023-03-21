@@ -54,6 +54,7 @@ Use other serializers/deserializers instead of JSON for the messages.
 <br /> **ANSWER HARIS**: **I used RabbitMQ as communication framework and publish subscribe as the communication pattern**
     
 2. Pack your rewritten application into containers.
+**Kommentar Florin:** I think the idea is to use the same containers as in part 1.**
 <br /> **ANSWER HARIS**: **See producer-mc1-part2/Dockerfile, receiver-mc1-part2/Dockerfile and the docker-compose-mc1-part2.yml**
 
 3. Answer the following questions and interpret your experiments or results: 

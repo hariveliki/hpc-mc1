@@ -1,6 +1,7 @@
 import pika, sys, os
 import time
 time.sleep(10)
+# könntest du wahrscheinlich im docker-compose.yml machen (mit depends)
 
 def main():
     print("function called")
@@ -16,6 +17,7 @@ def main():
 
     print(' [*] Waiting for messages. To exit press CTRL+C')
     channel.start_consuming()
+    # finde ich gut, dass du nicht beim consumen der ersten Nachricht aufhörst.
 
 if __name__ == '__main__':
     try:
