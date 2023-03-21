@@ -31,14 +31,19 @@ Note, the Docker Compose file available in the repository contains more containe
     * After testing, stop the endless loop again otherwise your computer resources are unnecessarily occupied or at the limit.
 
 6. Write a data processor and a data sink. The data processor should regularly read and process the data from the data generators. E.g., a calculation or a machine learning application on the retrieved data; a data enrichment; or the extraction of information from the message. Then the processor sends the data to a data sink. In the data sink the data is stored, e.g. in a CSV file. Use appropriate Kafka components and meaningful names of functions, variables, etc. for the implementation. 
-<br /> **ANSWER HARIS**: See notebooks/8887_produce and notebooks/8888_consume
+<br /> **ANSWER HARIS**: <br />
+**The data processor loops through the messages and manipulates the data structure (dictionary). He calculates the n-th fibonacci number recursively and changes the value of the dictionary. I integrated a stop after n message because the runtime takes to long. **
 
-7. Draw an overview of your application components including interfaces and data flows, for example using a component diagram. Answer the following questions and interpret your experiments or results: 
-    
-      * What are the tasks of the components?
-      * Which interfaces do the components have?
-      * Why did you decide to use these components? 
-      * Are there any other design decisions you have made? Which requirements (e.g. libraries, hardware, ...) does a component have?
+1. Draw an overview of your application components including interfaces and data flows, for example using a component diagram. Answer the following questions and interpret your experiments or results: 
+
+      * What are the tasks of the components?**ANSWER HARIS**<br />
+      * **There are two jupyter notebooks, which are producing and consuming data. between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.**
+      * Which interfaces do the components have?**ANSWER HARIS**<br />
+      * **The jupyter notebooks talk with the consumer and producer class from kafka with python code. For producing data you have to define the topic and the servers, and for consuming you provide the same information.**
+      * Why did you decide to use these components? **ANSWER HARIS**<br />
+      * **Because it's very convenient to work with jupyter notebooks to get things work**
+      * Are there any other design decisions you have made? Which requirements (e.g. libraries, hardware, ...) does a component have?**ANSWER HARIS**<br />
+      * **You need some specific requirements for kafka like kafka-python**
 
 #### Bonus 1
 Use other serializers/deserializers instead of JSON for the messages.
