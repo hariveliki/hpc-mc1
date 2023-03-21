@@ -14,7 +14,7 @@ services:
 
   producer:
     build:
-      context: ./producer-mc1-part2
+      context: ./producer
       dockerfile: Dockerfile
     container_name: producer
     depends_on:
@@ -24,7 +24,7 @@ services:
 
   receiver:
     build:
-      context: ./receiver-mc1-part2
+      context: ./receiver
       dockerfile: Dockerfile
     container_name: receiver
     ports:

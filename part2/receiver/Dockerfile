@@ -6,4 +6,4 @@ COPY . /receiver
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "-u", "receive.py" ]
+CMD [ "python", "-u", "consume.py" ]
