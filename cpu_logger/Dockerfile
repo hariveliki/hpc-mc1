@@ -6,7 +6,7 @@ COPY . /app
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-CMD [ "python", "main.py" ]
+CMD [ "python", "produce.py" ]
 
 
 

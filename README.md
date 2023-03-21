@@ -73,15 +73,23 @@ Show how your container setup could be integrated into a container orchestration
 
 ### Part 3: Performance Analysis and Evaluation
 
-1. Change the scalability of your communication framework by changing the used resources. (E.g.: add brokers and/or zookeepers and play with parameters in the docker-compose file. Use orders of magnited more producers/consumers.) Perform 2-3 experiments with different configurations.
+1. Change the scalability of your communication framework by changing the used resources. (E.g.: add brokers and/or zookeepers and play with parameters in the docker-compose file. Use orders of magnited more producers/consumers.) Perform 2-3 experiments with different configurations.<br />
+**ANSWER HARIS:**<br />
+**First Configuration: 4 Consumer, 1 Producer, 3 Brokers & 1 Zookeper**<br />
+**Problems with connecting 2 consumers, but after some time all consumers where possible to retrieve data**<br />
+**Second Configuration: 4 Consumer, 1 Producer, 2 Brokers & 1 Zookeper**<br />
+**Producer slowed down but consuming was still possible**<br />
+**Third Configuration: 4 Consumer, 1 Producer, 1 Broker & 1 Zookeper**<br />
+**Producer paused, 2 consumers stopped immediately and after some time all consumers stopped. Producing was still possible but much slower then before**<br />
+**HINT SIMON: Meldefluss visualisieren, wie viele Meldungen pro Sekunde kann ich consumen? Was passiert wenn ich consuming 10fache**<br />
 
-2. Analyze the performance of your application:
-
-    * Data generators/processors: measure the average time incl. standard deviation required by your data generator loop over several runs and loops. Determine a reasonable number of runs and loop executions for the performance analysis. 
+1. Analyze the performance of your application:
+**HINT SIMON: mit SnakeViz cProfile visualiseren**<br />
+    * Data generators/processors: measure the average time incl. standard deviation required by your data generator loop over several runs and loops. Determine a reasonable number of runs and loop executions for the performance analysis.
     * Data generators/processors: determine which call of your processor takes the most time. Which 3 methods are called the most or needed the most time and how much time?
     * Data generators/processors: create a profile of your processor code in a processor.prof file and create 1-2 visualizations of the profile (e.g. with [SnakeViz](https://jiffyclub.github.io/snakeviz/)).
 
-3. Did you detect bottlenecks? Describe and discuss 1-3 detected bottlenecks. 
+1. Did you detect bottlenecks? Describe and discuss 1-3 detected bottlenecks. 
 
 #### Bonus 3
 Mitigate or produce a bottleneck.

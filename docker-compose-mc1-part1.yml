@@ -8,14 +8,6 @@ services:
       - ./notebooks:/home/jovyan/
     ports:
       - "8888:8888"
-
-  jupyter-2:
-    container_name: jupyter2
-    image: jupyter/scipy-notebook:${JUPYTER_VERSION:-latest}
-    volumes:
-      - ./notebooks:/home/jovyan/
-    ports:
-      - "8887:8888"
         
   zookeeper:
     image: confluentinc/cp-zookeeper
@@ -92,11 +84,13 @@ services:
       KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-      
+  
   cpu_logger:
-    image: mykafka
     hostname: cpu_logger1
     container_name: cpu_logger1
+    build:
+      context: ./cpu_logger
+      dockerfile: Dockerfile
     depends_on:
       - broker-1
       - broker-2
