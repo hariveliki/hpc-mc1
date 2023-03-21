@@ -85,16 +85,5 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
   
-  cpu_logger:
-    hostname: cpu_logger1
-    container_name: cpu_logger1
-    build:
-      context: ./cpu_logger
-      dockerfile: Dockerfile
-    depends_on:
-      - broker-1
-      - broker-2
-      - broker-3
-    environment:
-      KAFKA_BROKERS: broker1:9093,broker2:9095,broker3:9097
+
       
