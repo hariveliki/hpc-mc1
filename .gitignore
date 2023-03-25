@@ -131,3 +131,7 @@ dmypy.json
 .DS_Store
 
 part3/notes.txt
+
+notebooks/
+rabbitmq-data/
+tbd/

@@ -1,12 +1,23 @@
-import pika
-import time
+import pika, time, os, sys, json, random
 time.sleep(10)
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
 
-channel = connection.channel()
+def produce():
+    with open("data.json") as f:
+        data = json.load(f)
 
-channel.queue_declare(queue='hello')
+    connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
+    channel = connection.channel()
+    channel.queue_declare(queue='product')
 
-channel.basic_publish(exchange='', routing_key='hello', body='Hello World!')
-print(" [x] Sent 'Hello World!'")
-connection.close()
+    n = 0
+    while True:
+        n += 1
+        random_int = random.randint(0, 300)
+        product = str(data[random_int])
+        channel.basic_publish(exchange='', routing_key='product', body=product)
+        print(" [x] Sent {}".format(n))
+        time.sleep(1)
+
+
+if __name__ == "__main__":
+    produce()
