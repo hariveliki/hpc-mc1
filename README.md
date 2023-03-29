@@ -32,18 +32,22 @@ Note, the Docker Compose file available in the repository contains more containe
 
 6. Write a data processor and a data sink. The data processor should regularly read and process the data from the data generators. E.g., a calculation or a machine learning application on the retrieved data; a data enrichment; or the extraction of information from the message. Then the processor sends the data to a data sink. In the data sink the data is stored, e.g. in a CSV file. Use appropriate Kafka components and meaningful names of functions, variables, etc. for the implementation. 
 <br /> **ANSWER HARIS**: <br />
-**The data processor loops through the messages and manipulates the data structure (dictionary). He calculates the n-th fibonacci number recursively and changes the value of the dictionary. I integrated a stop after n message because the runtime takes to long.**
+**The data processor loops through the messages and manipulates the data structure. He calculates the n-th fibonacci number recursively and changes the value of the dictionary. I integrated a stop after n message because the runtime took to long.**
 
 1. Draw an overview of your application components including interfaces and data flows, for example using a component diagram. Answer the following questions and interpret your experiments or results: 
 ![Component Diagram](./part1/application-overview.drawio.png)
-      * What are the tasks of the components?**ANSWER HARIS**<br />
-      * **There are two jupyter notebooks, which are producing and consuming data. between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.**
-      * Which interfaces do the components have?**ANSWER HARIS**<br />
-      * **The jupyter notebooks talk with the consumer and producer class from kafka with python code. For producing data you have to define the topic and the servers, and for consuming you provide the same information.**
-      * Why did you decide to use these components? **ANSWER HARIS**<br />
-      * **Because it's very convenient to work with jupyter notebooks to get things work**
-      * Are there any other design decisions you have made? Which requirements (e.g. libraries, hardware, ...) does a component have?**ANSWER HARIS**<br />
-      * **You need some specific requirements for kafka like kafka-python**
+      * What are the tasks of the components?
+      <br >**ANSWER HARIS**<br />
+      **There are two jupyter notebooks, which are producing and consuming data. between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.**
+      * Which interfaces do the components have?
+      <br />**ANSWER HARIS**<br />
+      **The jupyter notebooks talk with the consumer and producer class from kafka with python code. For producing data you have to define the topic and the servers, and for consuming you provide the same information.**
+      * Why did you decide to use these components?
+      <br />**ANSWER HARIS**<br />
+      **Zookeeper: Is necessary in administrating the cluster. Kafka Broker: Is used to store the messages in topics and to send them to the consumers. Jupyter Notebooks: Are a convenient way of creating producers and consumering and debug per section if something doesnt work**
+      * Are there any other design decisions you have made? Which requirements (e.g. libraries, hardware, ...) does a component have?<br />**ANSWER HARIS**<br />
+      **I inserted the data as json and consumed it with msg.value.get(). I would not need a separate identifier in Kafka as the data structure provides it.**
+      **You need some specific requirements for kafka like kafka-python**
 
 #### Bonus 1
 Use other serializers/deserializers instead of JSON for the messages.
@@ -86,15 +90,20 @@ Show how your container setup could be integrated into a container orchestration
 **Producer slowed down but consuming was still possible**<br />
 **Third Configuration: 4 Consumer, 1 Producer, 1 Broker & 1 Zookeper**<br />
 **Producer paused, 2 consumers stopped immediately and after some time all consumers stopped. Producing was still possible but much slower then before**<br />
-**HINT SIMON: Meldefluss visualisieren, wie viele Meldungen pro Sekunde kann ich consumen? Was passiert wenn ich consuming 10fache**<br />
 
 1. Analyze the performance of your application:
-**HINT SIMON: mit SnakeViz cProfile visualiseren**<br />
     * Data generators/processors: measure the average time incl. standard deviation required by your data generator loop over several runs and loops. Determine a reasonable number of runs and loop executions for the performance analysis.
-    * Data generators/processors: determine which call of your processor takes the most time. Which 3 methods are called the most or needed the most time and how much time?
-    * Data generators/processors: create a profile of your processor code in a processor.prof file and create 1-2 visualizations of the profile (e.g. with [SnakeViz](https://jiffyclub.github.io/snakeviz/)).
+    <br />**ANSWER HARIS**<br />
+    We see the average time and the standard deviation for 100 runs with a different number of loops. The standard deviation does not change over time. From this we can conclude that the generation of data and its transmission to Kafka is very stable.<br />
+    ![Component Diagram](./part3/notebooks/producer_part3_task2_point1.png)
+    <br />
+    * Data generators/processors: determine which call of your processor takes the most time. Which 3 methods are called the most or needed the most time and how much time?<br />
+    **ANSWER HARIS**<br /> Neither retrieving nor writing the data to the data sink takes much time. Only the data manupilation function, in my case a recursive Fibonacci function, takes about 18 seconds for 30 elements.<br />
+    ![Component Diagram](./part3/notebooks/consumer_part3_task2_point2.png)
+    * Data generators/processors: create a profile of your processor code in a processor.prof file and create 1-2 visualizations of the profile (e.g. with [SnakeViz](https://jiffyclub.github.io/snakeviz/)).<br />
+    **ANSWER HARIS**<br /> See visualization above created with cProfile. I had to write a custom function to visualize everything since SnakeViz didn't work on my machine.<br />
 
-1. Did you detect bottlenecks? Describe and discuss 1-3 detected bottlenecks. 
+2. Did you detect bottlenecks? Describe and discuss 1-3 detected bottlenecks.<br /> **ANSWER HARIS** The bootlenecks are small groups of brokers with the same number of consumers. As the number of brokers decreases, Kafka throws out more consumers until you increase them again. The speed of the producer also decreases with fewer brokers. In contrast, producing and consuming is very stable with different numbers of producers and consumers. Kafka keeps everything in balance.
 
 #### Bonus 3
 Mitigate or produce a bottleneck.
@@ -103,7 +112,10 @@ Mitigate or produce a bottleneck.
 ## Reflection
 
 Write a reflection on the realization of the mini-challenge. What went well? Where did problems occur? Where did you need more time than planned? 
-What would you do differently in the future? What would you change in the assignment? Give examples in each case.
+What would you do differently in the future? What would you change in the assignment? Give examples in each case.<br />
+**ANSWER HARIS**<br />
+For me, it was very difficult to implement the infrastructure, regardless of the tutorials provided. Issues like creating a different number of consumers consuming at the same time while a producer is producing, and then still understanding the behavior of the framework gave me a headache. I spent most of my time writing the code and trying to make things work before I understood the concept of communication patterns/frameworks. Also, the visualization didn't go well, especially when the standard libraries didn't work on my own computer. In the end, I got something done and understand the behavior of the communication patterns, but a month seems too little to deliver something reproducible. I would rather invest more time in building a framework that works in real life. Also, more code examples that help one answer the questions and analyze the performance properly would be very helpful.
+<br />
 
 
 ## Hints

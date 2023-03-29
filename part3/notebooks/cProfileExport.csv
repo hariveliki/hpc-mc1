@@ -1,0 +1,136 @@
+ncalls,tottime,percall,cumtime,percall,filename:lineno(function)
+4,0.000,0.000,0.000,0.000,{method,'append' of 'list' objects}
+2,0.000,0.000,0.000,0.000,{method,'count' of 'list' objects}
+2,0.000,0.000,0.000,0.000,{built-in,method from_bytes}
+4,0.000,0.000,0.000,0.000,{method,'keys' of 'dict' objects}
+2,0.000,0.000,0.000,0.000,{method,'items' of 'dict' objects}
+2,0.000,0.000,0.000,0.000,{method,'add' of 'set' objects}
+2,0.000,0.000,0.000,0.000,{built-in,method __new__ of type object at 0xaaaabf08ee58}
+2,0.000,0.000,0.000,0.000,{method,'join' of 'str' objects}
+1,0.000,0.000,0.000,0.000,{method,'startswith' of 'str' objects}
+2,0.000,0.000,0.000,0.000,{method,'format' of 'str' objects}
+8,0.000,0.000,0.000,0.000,{built-in,method posix.getpid}
+2,0.000,0.000,0.000,0.000,{built-in,method posix.urandom}
+2,0.000,0.000,0.000,0.000,{method,'end' of 're.Match' objects}
+2,0.000,0.000,0.000,0.000,{method,'match' of 're.Pattern' objects}
+1,0.003,0.003,0.003,0.003,{built-in,method _codecs.utf_8_decode}
+6,0.000,0.000,0.000,0.000,{method,'append' of 'collections.deque' objects}
+2,0.000,0.000,0.000,0.000,{method,'popleft' of 'collections.deque' objects}
+8,0.000,0.000,0.000,0.000,{built-in,method time.time}
+2,1.002,0.501,1.002,0.501,{built-in,method time.sleep}
+4,0.000,0.000,0.000,0.000,{built-in,method _thread.allocate_lock}
+10,0.000,0.000,0.000,0.000,{method,'__exit__' of '_thread.RLock' objects}
+10,0.009,0.001,0.009,0.001,{method,'acquire' of '_thread.lock' objects}
+2,0.000,0.000,0.000,0.000,{method,'release' of '_thread.lock' objects}
+2,0.000,0.000,0.000,0.000,{method,'__enter__' of '_thread.lock' objects}
+22,0.000,0.000,0.000,0.000,{method,'__exit__' of '_thread.lock' objects}
+1,0.002,0.002,0.002,0.002,{built-in,method io.open}
+1,0.000,0.000,0.000,0.000,{method,'__exit__' of '_io._IOBase' objects}
+1,0.005,0.005,0.009,0.009,{method,'read' of '_io.TextIOWrapper' objects}
+8,0.000,0.000,0.000,0.000,{method,'write' of '_io.StringIO' objects}
+2,0.000,0.000,0.000,0.000,{method,'extend' of 'bytearray' objects}
+2,0.000,0.000,0.000,0.000,{built-in,method builtins.all}
+1,0.000,0.000,1.065,1.065,{built-in,method builtins.exec}
+21,0.000,0.000,0.000,0.000,{built-in,method builtins.isinstance}
+2,0.000,0.000,0.000,0.000,{built-in,method builtins.iter}
+38,0.000,0.000,0.000,0.000,{built-in,method builtins.len}
+4,0.000,0.000,0.000,0.000,{built-in,method builtins.max}
+4,0.000,0.000,0.000,0.000,{built-in,method builtins.print}
+2,0.000,0.000,0.000,0.000,{built-in,method builtins.sorted}
+1,0.004,0.004,1.065,1.065,<string>:1(<module>)
+1,0.000,0.000,1.061,1.061,/tmp/ipykernel_1986/2268952642.py:3(produce)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:521(_max_usable_produce_magic)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:529(_estimate_size_in_bytes)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:593(<genexpr>)
+2,0.000,0.000,0.001,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:538(send)
+2,0.000,0.000,0.009,0.004,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:624(flush)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:651(_ensure_valid_record_size)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:664(_wait_on_metadata)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:709(_serialize)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/kafka.py:716(_partition)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/partitioner/default.py:15(__call__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/partitioner/default.py:36(murmur2)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/future.py:11(__init__)
+2,0.000,0.000,0.009,0.004,/opt/conda/lib/python3.10/site-packages/kafka/producer/future.py:26(wait)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:24(increment)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/future.py:32(__init__)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:29(decrement)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:39(__init__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:57(try_append)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:200(append)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:513(begin_flush)
+2,0.000,0.000,0.009,0.004,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:520(await_flush_completion)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:580(add)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/record_accumulator.py:588(all)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/buffer.py:38(allocate)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/sender.py:173(add_topic)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/producer/sender.py:331(wakeup)
+2,0.000,0.000,0.010,0.005,/tmp/ipykernel_1986/661153088.py:1(publish_message)
+2,0.000,0.000,0.000,0.000,<string>:1(<lambda>)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:118(__init__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:137(append)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:176(is_full)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:346(__init__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:352(append)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:391(_encode_msg)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:472(size)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:479(size_in_bytes)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:486(record_size)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:495(record_overhead)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:503(estimate_size_in_bytes)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:521(__init__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:527(offset)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:531(crc)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:535(size)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:539(timestamp)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/record/util.py:131(calc_crc32)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/vendor/six.py:592(iteritems)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/client_async.py:929(wakeup)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/cluster.py:106(partitions_for_topic)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/cluster.py:131(<listcomp>)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/cluster.py:119(available_partitions_for_topic)
+4,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/future.py:12(__init__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/future.py:22(failed)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/future.py:48(add_callback)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/kafka/future.py:57(add_errback)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:90(_event_pipe)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:203(schedule)
+8,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:444(_is_master_process)
+8,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:465(_schedule_flush)
+8,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:535(write)
+1,0.000,0.000,0.002,0.002,/opt/conda/lib/python3.10/site-packages/IPython/core/interactiveshell.py:273(_modified_open)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/uuid.py:138(__init__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/uuid.py:279(__str__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/uuid.py:718(uuid4)
+1,0.000,0.000,0.000,0.000,{method,'disable' of '_lsprof.Profiler' objects}
+2,0.000,0.000,0.000,0.000,{built-in,method binascii.crc32}
+4,0.000,0.000,0.000,0.000,{method,'sendall' of '_socket.socket' objects}
+10,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/logging/__init__.py:1455(debug)
+10,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/logging/__init__.py:1724(isEnabledFor)
+6,0.000,0.000,0.000,0.000,{built-in,method _struct.pack_into}
+2,0.000,0.000,0.000,0.000,{method,'pack_into' of '_struct.Struct' objects}
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/site-packages/zmq/sugar/socket.py:613(send)
+2,0.000,0.000,0.001,0.001,/opt/conda/lib/python3.10/json/__init__.py:183(dumps)
+1,0.000,0.000,0.046,0.046,/opt/conda/lib/python3.10/json/__init__.py:274(load)
+1,0.000,0.000,0.037,0.037,/opt/conda/lib/python3.10/json/__init__.py:299(loads)
+1,0.000,0.000,0.037,0.037,/opt/conda/lib/python3.10/json/decoder.py:332(decode)
+2,0.000,0.000,0.001,0.001,/opt/conda/lib/python3.10/json/encoder.py:182(encode)
+1,0.037,0.037,0.037,0.037,/opt/conda/lib/python3.10/json/decoder.py:343(raw_decode)
+2,0.001,0.001,0.001,0.001,/opt/conda/lib/python3.10/json/encoder.py:204(iterencode)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:236(__init__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:264(__enter__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:267(__exit__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:273(_release_save)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:276(_acquire_restore)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:279(_is_owned)
+2,0.000,0.000,0.009,0.004,/opt/conda/lib/python3.10/threading.py:288(wait)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:545(__init__)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:553(is_set)
+2,0.000,0.000,0.009,0.004,/opt/conda/lib/python3.10/threading.py:589(wait)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:1102(_wait_for_tstate_lock)
+2,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/threading.py:1169(is_alive)
+1,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/codecs.py:309(__init__)
+1,0.000,0.000,0.003,0.003,/opt/conda/lib/python3.10/codecs.py:319(decode)
+1,0.000,0.000,0.000,0.000,/opt/conda/lib/python3.10/codecs.py:260(__init__)
+
+

@@ -1,0 +1,397 @@
+         77557986 function calls (17870 primitive calls) in 18.818 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+77540342/330   17.617    0.000   17.617    0.053 /tmp/ipykernel_290/630567185.py:6(fibonacci)
+       18    1.058    0.059    1.058    0.059 {method 'poll' of 'select.epoll' objects}
+        1    0.101    0.101    0.101    0.101 {built-in method time.sleep}
+        1    0.022    0.022    0.022    0.022 {built-in method io.open}
+       30    0.003    0.000    0.003    0.000 /opt/conda/lib/python3.10/json/decoder.py:343(raw_decode)
+        1    0.001    0.001    0.001    0.001 {method '__exit__' of '_io._IOBase' objects}
+        1    0.001    0.001   18.792   18.792 /tmp/ipykernel_290/630567185.py:13(process_data)
+        2    0.001    0.000    0.001    0.000 {built-in method _socket.getaddrinfo}
+   102/70    0.001    0.000    0.002    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sensor.py:55(record)
+     1382    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/json/encoder.py:277(_iterencode_list)
+        5    0.000    0.000    0.000    0.000 {method 'send' of '_socket.socket' objects}
+     1380    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/json/encoder.py:333(_iterencode_dict)
+      123    0.000    0.000    0.000    0.000 {method 'recv' of '_socket.socket' objects}
+     1382    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/json/encoder.py:413(_iterencode)
+        1    0.000    0.000    0.002    0.002 /opt/conda/lib/python3.10/json/__init__.py:120(dump)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/zmq/sugar/socket.py:613(send)
+      230    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sampled_stat.py:38(record)
+       18    0.000    0.000    1.062    0.059 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:625(_poll)
+      120    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:535(write)
+        9    0.000    0.000    0.002    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1079(_recv)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.compile}
+      120    0.000    0.000    0.000    0.000 {built-in method posix.getpid}
+        9    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/parser.py:80(receive_bytes)
+       31    0.000    0.000    0.004    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:455(_unpack_message_set)
+       66    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/frame.py:6(read)
+        4    0.000    0.000    0.000    0.000 {method 'connect_ex' of '_socket.socket' objects}
+      102    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sensor.py:78(_check_quotas)
+       14    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1043(can_send_more)
+     1434    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+       18    0.000    0.000    1.058    0.059 /opt/conda/lib/python3.10/selectors.py:452(select)
+        4    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:359(connect)
+       17    0.000    0.000    1.065    0.063 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:550(poll)
+      230    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sampled_stat.py:99(is_complete)
+      230    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sampled_stat.py:52(current)
+       37    0.000    0.000    0.000    0.000 {method 'decode' of 'bytes' objects}
+       12    0.000    0.000    1.172    0.098 /opt/conda/lib/python3.10/site-packages/kafka/consumer/group.py:665(_poll_once)
+       24    0.000    0.000    0.005    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:310(fetched_records)
+        7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/frame.py:2(__init__)
+     1381    0.000    0.000    0.000    0.000 {method 'write' of '_io.TextIOWrapper' objects}
+       60    0.000    0.000    0.001    0.000 {built-in method builtins.print}
+       62    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+       32    0.000    0.000    1.173    0.037 /opt/conda/lib/python3.10/site-packages/kafka/consumer/group.py:1114(_message_generator_v2)
+  791/785    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+       90    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:313(key)
+       13    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/frame.py:15(write)
+       31    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/group.py:1217(_set_consumer_timeout)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:659(_create_fetch_requests)
+      137    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/rate.py:47(record)
+       60    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metric_name.py:79(__hash__)
+       15    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/struct.py:14(__init__)
+      324    0.000    0.000    0.000    0.000 {built-in method time.time}
+       31    0.000    0.000    1.173    0.038 /opt/conda/lib/python3.10/site-packages/kafka/consumer/group.py:1195(next_v2)
+        6    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/random.py:239(_randbelow_with_getrandbits)
+      105    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/copy.py:66(copy)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:203(schedule)
+      460    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/kafka_metric.py:25(config)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/codeop.py:117(__call__)
+       34    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:362(is_fetchable)
+      120    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:444(_is_master_process)
+       30    0.000    0.000    0.003    0.000 /opt/conda/lib/python3.10/json/decoder.py:332(decode)
+       69    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/logging/__init__.py:1724(isEnabledFor)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/parser.py:47(send_request)
+       46    0.000    0.000    0.000    0.000 {method 'join' of 'bytes' objects}
+       22    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1134(requests_timed_out)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metrics.py:224(register_metric)
+       31    0.000    0.000    1.173    0.038 /opt/conda/lib/python3.10/site-packages/kafka/consumer/group.py:1184(__next__)
+       11    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:509(_can_send_request)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:750(_handle_fetch_response)
+      331    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:742(least_loaded_node)
+       17    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/util.py:34(__init__)
+       18    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:807(_maybe_refresh_metadata)
+       60    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:235(__iter__)
+       18    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:728(_fire_pending_completed_requests)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:961(_send)
+        2    0.000    0.000    0.005    0.002 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:781(_parse_fetched_data)
+       32    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:68(_cache_next)
+       30    0.000    0.000    0.004    0.000 /opt/conda/lib/python3.10/json/__init__.py:299(loads)
+       12    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:115(send_fetches)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:376(modify)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:218(_read_key_value)
+      330    0.000    0.000    0.000    0.000 {built-in method _json.encode_basestring_ascii}
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sensor.py:113(add)
+      344    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+      5/4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:268(_conn_state_change)
+    18/10    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:146(<listcomp>)
+       25    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:709(in_flight_request_count)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1309(__init__)
+        9    0.000    0.000    0.002    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1048(recv)
+      120    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:465(_schedule_flush)
+       12    0.000    0.000    0.000    0.000 {method 'modify' of 'select.epoll' objects}
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/coordinator/base.py:322(time_to_next_heartbeat)
+    18/10    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:143(encode)
+       31    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:96(next_batch)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/json/__init__.py:244(detect_encoding)
+       38    0.000    0.000    1.173    0.031 {built-in method builtins.next}
+      233    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+      102    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        4    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/parser.py:137(_process_response)
+       47    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/vendor/six.py:592(iteritems)
+      121    0.000    0.000    0.000    0.000 {built-in method _struct.unpack_from}
+       18    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metrics.py:119(sensor)
+       21    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/cluster.py:167(ttl)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:135(__init__)
+       61    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+       57    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/logging/__init__.py:1455(debug)
+        1    0.000    0.000    0.000    0.000 {function socket.close at 0xffff9afbd5a0}
+        5    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1010(send_pending_requests_v2)
+       59    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0xaaaabe0eee58}
+       38    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:62(decode)
+      120    0.000    0.000    0.000    0.000 {method 'write' of '_io.StringIO' objects}
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:513(_send_offset_requests)
+        2    0.000    0.000    0.002    0.001 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:365(_maybe_connect)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metrics.py:85(metric_name)
+        2    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:232(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'sendall' of '_socket.socket' objects}
+        1    0.000    0.000    0.104    0.104 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:249(_retrieve_offsets)
+       18    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:615(_register_send_sockets)
+        1    0.000    0.000    0.026    0.026 /tmp/ipykernel_290/630567185.py:1(write_json_to_file)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/threading.py:1169(is_alive)
+       18    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/vendor/six.py:589(itervalues)
+       61    0.000    0.000    0.000    0.000 {method 'pack' of '_struct.Struct' objects}
+       48    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sampled_stat.py:45(new_sample)
+       60    0.000    0.000    0.004    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:506(_deserialize)
+        2    0.000    0.000    1.172    0.586 /opt/conda/lib/python3.10/site-packages/kafka/consumer/group.py:614(poll)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:978(record_topic_fetch_metrics)
+       60    0.000    0.000    0.000    0.000 {method 'match' of 're.Pattern' objects}
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metric_name.py:42(__init__)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/coordinator/consumer.py:362(need_rejoin)
+     12/5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:189(decode)
+        7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/random.py:380(shuffle)
+       62    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/count.py:13(update)
+     11/7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:152(<listcomp>)
+       60    0.000    0.000    0.000    0.000 {method 'tobytes' of 'memoryview' objects}
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:648(_fetchable_partitions)
+       66    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/avg.py:13(update)
+        3    0.000    0.000   18.818    6.273 /opt/conda/lib/python3.10/site-packages/IPython/core/interactiveshell.py:3424(run_code)
+       30    0.000    0.000    0.000    0.000 {method 'popleft' of 'collections.deque' objects}
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sensor.py:18(__init__)
+       75    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/rate.py:113(update)
+       20    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:21(_fileobj_to_fd)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:305(fetchable_partitions)
+       11    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:984(update)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/ipykernel/iostream.py:90(_event_pipe)
+    16/15    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/util.py:46(__call__)
+        6    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/IPython/core/compilerop.py:180(extra_flags)
+       10    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:84(encode)
+        6    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:515(send)
+       61    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:9(_pack)
+       17    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:999(next_check_ms)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/cluster.py:229(update_metadata)
+       57    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:18(_unpack)
+       93    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
+       48    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sampled_stat.py:88(__init__)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:198(_read_header)
+       57    0.000    0.000    0.000    0.000 {method 'unpack' of '_struct.Struct' objects}
+        9    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.lock' objects}
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:146(_clean_done_fetch_futures)
+       60    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metric_name.py:75(tags)
+       90    0.000    0.000    0.000    0.000 {method 'startswith' of 'bytes' objects}
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:563(_send_offset_request)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/collections/__init__.py:430(_replace)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/struct.py:46(decode)
+       42    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:419(is_fetchable)
+       10    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/cluster.py:135(leader_for_partition)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/socket.py:220(__init__)
+       18    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:947(_maybe_close_oldest_connection)
+       10    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/struct.py:41(_encode_self)
+      9/5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:181(encode)
+     10/7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/future.py:76(_call_backs)
+       27    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/max_stat.py:11(update)
+       10    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:90(decode)
+       44    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metrics.py:105(get_sensor)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:570(_send_bytes)
+       65    0.000    0.000    0.000    0.000 {built-in method builtins.iter}
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/contextlib.py:102(__init__)
+       65    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/coordinator/consumer.py:295(time_to_next_poll)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:950(send)
+       19    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:945(_can_send_recv)
+      111    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/api.py:17(__init__)
+     11/7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:151(decode)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/future.py:48(add_callback)
+       37    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:58(encode)
+       13    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:343(has_all_fetch_positions)
+        1    0.000    0.000    0.022    0.022 /opt/conda/lib/python3.10/site-packages/IPython/core/interactiveshell.py:273(_modified_open)
+    24/12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sensor.py:34(_check_forest)
+        7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/count.py:10(__init__)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:149(timestamp_type)
+       18    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+       17    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:871(connecting)
+       15    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/future.py:12(__init__)
+        2    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/socket.py:938(getaddrinfo)
+       20    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:216(_fileobj_lookup)
+       13    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/coordinator/consumer.py:190(_auto_assign_all_partitions)
+       18    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:1011(poll_expired_connection)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:181(get_key)
+     12/5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:193(<listcomp>)
+       70    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:389(_set_position)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:906(close)
+       18    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:276(_key_from_fd)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/json/encoder.py:204(iterencode)
+        2    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1515(dns_lookup)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/kafka_metric.py:8(__init__)
+       90    0.000    0.000    0.000    0.000 {built-in method builtins.hash}
+       50    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:260(_can_connect)
+      7/4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/future.py:31(success)
+       20    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:45(encode)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/threading.py:264(__enter__)
+       49    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1417(_address_family)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/contextlib.py:139(__exit__)
+      9/5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:186(<listcomp>)
+       17    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:725(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:352(_append)
+       90    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:319(value)
+       30    0.000    0.000    0.000    0.000 {method 'unpack_from' of '_struct.Struct' objects}
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/threading.py:90(RLock)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:289(__init__)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/threading.py:1102(_wait_for_tstate_lock)
+       12    0.000    0.000    0.000    0.000 {method 'encode' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/struct.py:50(<listcomp>)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/parser.py:180(_reset_buffer)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:235(register)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/collections/__init__.py:420(_make)
+        3    0.000    0.000   18.818    6.273 {built-in method builtins.exec}
+       60    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/kafka_metric.py:17(metric_name)
+       21    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:867(connected)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/sampled_stat.py:25(__init__)
+       12    0.000    0.000    0.000    0.000 {method '__copy__' of 'collections.deque' objects}
+       15    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:49(decode)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/parser.py:28(__init__)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:395(ready)
+       14    0.000    0.000    0.000    0.000 {built-in method math.ceil}
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/contextlib.py:279(helper)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/contextlib.py:130(__enter__)
+        1    0.000    0.000   18.792   18.792 /tmp/ipykernel_290/630567185.py:1(<module>)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:334(maybe_connect)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:352(register)
+        2    0.000    0.000    0.000    0.000 <string>:1(<lambda>)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/IPython/core/interactiveshell.py:3376(compare)
+       17    0.000    0.000    0.000    0.000 {built-in method builtins.sum}
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/traitlets/traitlets.py:654(get)
+        2    0.000    0.000    0.000    0.000 {method 'register' of 'select.epoll' objects}
+       10    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/struct.py:43(<listcomp>)
+       60    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metrics.py:78(metrics)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:890(__len__)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:42(__init__)
+       15    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/rate.py:40(__init__)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:925(record)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:587(_handle_offset_response)
+       60    0.000    0.000    0.000    0.000 {method 'end' of 're.Match' objects}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1302(__str__)
+        1    0.000    0.000    0.104    0.104 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:218(_reset_offset)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:939(_clear_wake_fd)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/enum.py:359(__call__)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:70(__getitem__)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:163(compression_type)
+        6    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/logging/__init__.py:1710(getEffectiveLevel)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/parser.py:40(_next_correlation_id)
+       21    0.000    0.000    0.000    0.000 {method 'extend' of 'collections.deque' objects}
+       26    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/frame.py:23(tell)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/encodings/idna.py:145(encode)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:483(is_ready)
+        7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/logging/__init__.py:219(_acquireLock)
+        7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/max_stat.py:8(__init__)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1435(get_ip_port_afi)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/threading.py:267(__exit__)
+       32    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+       42    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metrics.py:74(config)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/future.py:57(add_errback)
+       34    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        8    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/avg.py:10(__init__)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/errors.py:514(for_code)
+        8    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/stats/rate.py:108(__init__)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:929(wakeup)
+       14    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:313(partitions_auto_assigned)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/enum.py:678(__new__)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/cluster.py:83(brokers)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/traitlets/traitlets.py:692(__get__)
+        6    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/logging/__init__.py:1532(log)
+       16    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1137(<lambda>)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/socket.py:99(_intenum_converter)
+       16    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metric_name.py:67(group)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:325(headers)
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/coordinator/consumer.py:258(poll)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:297(offset)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/coordinator/consumer.py:159(_handle_metadata_update)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:233(assign_from_subscribed)
+       18    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:919(__init__)
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/parser.py:74(send_bytes)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:886(_update_reconnect_backoff)
+       12    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/socket.py:494(_real_close)
+       20    0.000    0.000    0.000    0.000 {method 'fileno' of '_socket.socket' objects}
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:301(timestamp)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/metrics/metric_name.py:63(name)
+       11    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:393(_get_position)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:108(decode)
+       12    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.RLock' objects}
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:307(timestamp_type)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/codecs.py:186(__init__)
+        7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/logging/__init__.py:228(_releaseLock)
+       30    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/legacy_records.py:329(checksum)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/random.py:546(uniform)
+        2    0.000    0.000    0.000    0.000 {method 'setsockopt' of '_socket.socket' objects}
+        7    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/logging/__init__.py:1307(disable)
+        8    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
+       12    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/frame.py:20(seek)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/IPython/core/interactiveshell.py:1227(user_global_ns)
+        4    0.000    0.000    0.000    0.000 {built-in method _socket.inet_pton}
+        1    0.000    0.000    0.104    0.104 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:159(update_fetch_positions)
+        2    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:320(_next_afi_sockaddr)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:878(disconnected)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:758(<listcomp>)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:75(decode)
+        7    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.RLock' objects}
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:754(<listcomp>)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/cluster.py:91(broker_metadata)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/future.py:39(failure)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:882(_reset_reconnect_backoff)
+        2    0.000    0.000    0.001    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:312(_dns_lookup)
+        4    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/logging/__init__.py:1467(info)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:366(unregister)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:376(__init__)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/json/encoder.py:259(_make_iterencode)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:869(__init__)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/cluster.py:106(partitions_for_topic)
+        4    0.000    0.000    0.000    0.000 {method 'remove' of 'set' objects}
+        1    0.000    0.000    0.104    0.104 /opt/conda/lib/python3.10/site-packages/kafka/consumer/group.py:1084(_update_fetch_positions)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:71(encode)
+        3    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:669(<lambda>)
+       10    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/api.py:46(expect_response)
+        9    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/threading.py:553(is_set)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/coordinator/consumer.py:200(_build_metadata_snapshot)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:1510(is_inet_4_or_6)
+        9    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+        5    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:273(get_map)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:898(take)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:898(_close_socket)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:356(is_assigned)
+        4    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:841(blacked_out)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:281(seek)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:545(on_success)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:371(_add_assigned_partition)
+        1    0.000    0.000    0.000    0.000 {method 'unregister' of 'select.epoll' objects}
+        6    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/cluster.py:80(is_bootstrap)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/future.py:19(succeeded)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:405(seek)
+        2    0.000    0.000    0.000    0.000 {method 'setblocking' of '_socket.socket' objects}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:349(missing_fetch_positions)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:134(reset_offsets_if_needed)
+        2    0.000    0.000    0.000    0.000 {method 'split' of 'bytes' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/socket.py:498(close)
+        2    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:92(has_next)
+        7    0.000    0.000    0.000    0.000 {method 'release' of '_thread.RLock' objects}
+        6    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:50(size_in_bytes)
+        5    0.000    0.000    0.000    0.000 {method 'pop' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/selectors.py:248(unregister)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/coordinator/consumer.py:184(<listcomp>)
+        2    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:994(is_expired)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/conn.py:903(__del__)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:325(need_offset_reset)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/record/memory_records.py:53(valid_bytes)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/future.py:25(retriable)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/protocol/types.py:131(decode)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:398(await_reset)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:990(remove)
+        2    0.000    0.000    0.000    0.000 {method 'clear' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:553(on_fail)
+        1    0.000    0.000    0.000    0.000 {method 'random' of '_random.Random' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/fetcher.py:584(<lambda>)
+        2    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:340(is_offset_reset_needed)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/client_async.py:843(refresh_done)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/subscription_state.py:266(group_subscription)
+        1    0.000    0.000    0.000    0.000 /opt/conda/lib/python3.10/site-packages/kafka/consumer/group.py:1181(__iter__)
+
+

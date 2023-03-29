@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+  jupyter-1:
+    container_name: jupyter1
+    image: jupyter/scipy-notebook:${JUPYTER_VERSION:-latest}
+    volumes:
+      - ./notebooks:/home/jovyan/
+    ports:
+      - "8888:8888"
+  
   zookeeper:
     image: confluentinc/cp-zookeeper
     hostname: zookeeper
@@ -86,6 +94,8 @@ services:
       - broker-1
       - broker-2
       - broker-3
+    volumes:
+      - ./producer:/app
 
   consumer-1:
     build:

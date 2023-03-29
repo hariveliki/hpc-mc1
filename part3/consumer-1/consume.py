@@ -24,8 +24,8 @@ def consume(consumer):
     for msg in consumer:
         print("Start consuming")
         message = msg.value.get("product")
-        print("Message consumed: {}".format(message.keys()))
-        print("n message: {}".format(n))
+        assert message
+        print("n Message consumed: {}".format(n))
         n += 1
         time.sleep(1)
 

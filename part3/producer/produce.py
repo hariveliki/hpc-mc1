@@ -1,4 +1,5 @@
 from kafka import KafkaConsumer, KafkaProducer
+import atexit
 import json
 import uuid
 import random
@@ -7,6 +8,8 @@ import cProfile
 import os
 import pstats
 from pstats import SortKey
+import csv
+time.sleep(10)
 
 
 def connect_kafka_producer(servers):
@@ -33,27 +36,35 @@ def publish_message(producer_instance, topic_name, key, value):
 
 
 def produce_xy(producer, topic_name):
-    cwd = os.getcwd()
     with open("data.json") as file:
         data = json.load(file)
-    len_max = len(data)
-    n_get = 0
     n_item = 1
     while True:
-        if n_get == len_max:
-            n_get = 0
-        product = data[n_get]
+        random_int = random.randint(0, 300)
+        product = data[random_int]
         message = json.dumps({"product": product})
         publish_message(producer, topic_name, str(uuid.uuid4()), message)
         print("Published items so far: {}".format(n_item))
-        time.sleep(0.5)
+        time.sleep(1)
         n_item += 1
-        n_get += 1
 
 
 if __name__ == "__main__":
     servers = ['broker1:9093', 'broker2:9094', 'broker3:9095']
     topic = "products"
     producer = connect_kafka_producer(servers)
-    produce_xy(producer, topic)
+    consume_stats = [
+        ["run", "loops", "time", "calls"]
+    ]
+    for run in range(0, 10):
+        for loop in range(0, 10):
+            cProfile.run("produce_xy(producer, topic)", 'data_generator_stats')
+            stats = pstats.Stats('data_generator_stats')
+            total_time = stats.total_tt
+            ncalls = stats.total_calls
+            consume_stats.append([run, loop, total_time, ncalls])
+
+    with open('consume_stats.csv', 'w') as f:
+        writer = csv.writer(f)
+        writer.writerows(consume_stats)
 

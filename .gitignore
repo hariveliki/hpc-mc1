@@ -132,6 +132,6 @@ dmypy.json
 
 part3/notes.txt
 
-notebooks/
+/notebooks
 rabbitmq-data/
 tbd/
