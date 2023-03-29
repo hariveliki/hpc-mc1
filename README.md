@@ -99,9 +99,9 @@ Show how your container setup could be integrated into a container orchestration
     <br />
     * Data generators/processors: determine which call of your processor takes the most time. Which 3 methods are called the most or needed the most time and how much time?
      <br />**ANSWER HARIS**<br /> Neither retrieving nor writing the data to the data sink takes much time. Only the data manupilation function, in my case a recursive Fibonacci function, takes about 18 seconds for 30 elements
-    * Data generators/processors: create a profile of your processor code in a processor.prof file and create 1-2 visualizations of the profile.
+    * Data generators/processors: create a profile of your processor code in a processor.prof file and create 1-2 visualizations of the profile.![whatever](./part3/notebooks/output.png)
     <br />**ANSWER HARIS**<br /> See visualization above created with cProfile. I had to write a custom function to visualize everything since SnakeViz didn't work on my machine.<br />
-![whatever](./part3/notebooks/output.png)
+
 2. Did you detect bottlenecks? Describe and discuss 1-3 detected bottlenecks.<br /> **ANSWER HARIS** The bootlenecks are small groups of brokers with the same number of consumers. As the number of brokers decreases, Kafka throws out more consumers until you increase them again. The speed of the producer also decreases with fewer brokers. In contrast, producing and consuming is very stable with different numbers of producers and consumers. Kafka keeps everything in balance.
 
 #### Bonus 3
