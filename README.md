@@ -97,6 +97,7 @@ Show how your container setup could be integrated into a container orchestration
     We see the average time and the standard deviation for 100 runs with a different number of loops. The standard deviation does not change over time. From this we can conclude that the generation of data and its transmission to Kafka is very stable.<br />
     ![producer](./part3/notebooks/producer_part3_task2_point1.png)
     <br />
+    ![consumer](./part3/notebooks/output.png)
     * Data generators/processors: determine which call of your processor takes the most time. Which 3 methods are called the most or needed the most time and how much time?
      <br />**ANSWER HARIS**<br /> Neither retrieving nor writing the data to the data sink takes much time. Only the data manupilation function, in my case a recursive Fibonacci function, takes about 18 seconds for 30 elements
     ![consumer](./part3/notebooks/output.png).<br />
