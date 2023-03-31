@@ -38,7 +38,11 @@ Note, the Docker Compose file available in the repository contains more containe
 ![Component Diagram](./part1/application-overview.drawio.png)
       * What are the tasks of the components?
       <br >**ANSWER HARIS**<br />
-      **There are two jupyter notebooks, which are producing and consuming data. between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.**
+      **There are two jupyter notebooks, which are producing and consuming data. Between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.**<br />
+      **The Zookeeper is a centralized service which is used to maintain naming and configuration data. The service also keeps track of the status of the cluster nodes and the topics, partitions etc.**
+      <br />
+      **The Kafka broker is a server in the cluster which receives and sends data. Each broker has a certain topic partition. All partitions are distributed across all brokers.**
+      <br />
       * Which interfaces do the components have?
       <br />**ANSWER HARIS**<br />
       **The jupyter notebooks talk with the consumer and producer class from kafka with python code. For producing data you have to define the topic and the servers, and for consuming you provide the same information.**
@@ -55,10 +59,10 @@ Use other serializers/deserializers instead of JSON for the messages.
 ### Part 2: Communication Patterns
 
 1. Rewrite your application of part 1 using another communication pattern. You can also use another communciation framework, such as RabbitMQ and/or another underlying messaging protcol such as MQTT.
-<br /> **ANSWER HARIS**: **I used RabbitMQ as communication framework and publish subscribe as the communication pattern**
+<br /> **ANSWER HARIS**: **I used RabbitMQ as communication framework and publish subscribe as the communication pattern**<br />
     
 2. Pack your rewritten application into containers.
-<br /> **ANSWER HARIS**: **See part2/docker-compose.yml**
+<br /> **ANSWER HARIS**: **See part2/docker-compose.yml**<br />
 
 1. Answer the following questions and interpret your experiments or results: 
       * Which communication pattern is used by Kafka?
@@ -70,12 +74,12 @@ Use other serializers/deserializers instead of JSON for the messages.
         **Advantage of Publish-Subscribe Pattern:<br /> No complex programming is required to add or remove subscribers to a topic. Thus publish-subscribe systems provide a great deal of scalability and flexibility<br /> Disadvantage of Publish-Subscribe Pattern:<br /> Due to asynchronous interactions, testing is not a matter of making a request and then analyzing the result, thus testing can be challenging.**
       * How can you scale the two different approaches? What are ? Why? What are challenges to be considered?
         **ANSWER HARIS:<br /> For apache kafka you must add brokers to scale out or rebalance data across brokers which are being more heavily used. But pushing new Kafka broker into production can potentially impact performance because moving thousands of partitions to staging can take hours.<br />**
-        **For RabbitMQ and the publish-subscribe pattern you can split the queue into multiple queues and distribute them in the cluster to increase throughput. Having multiple clusters**
+        **For RabbitMQ and the publish-subscribe pattern you can split the queue into multiple queues and distribute them in the cluster to increase throughput.**
       * What other 2-3 topologies/patterns do you know used for data processing? Describe the differences and use cases with at least one additional topology.<br />
         **ANSWER HARIS: Lambda architecture is a way of processing massive quantities of data with a hybrid approach using batch-processing and stream-processing. No infrastructure is a key factor why lambda gets considered, whereas high-troughput, distributed and scalable are the primary reasons why kafka is favored. Another data processing topology is microservice architecture, which means you're building applications of small, independent services that communicate with each other trough APIs**
 
       * Which pattern suits your chosen application best?
-       **ANSWER HARIS: At work we try to switch to RabbitMQ with the publish-subscribe pattern to solve the problem of competing consumers. The current REST API is unable to serve all consumers for a reasonable amount of time, causing consumers to wait too long after a request is made.**
+       **ANSWER HARIS: Both are equally good in the operation of the application. I have not seen any problems due to multiple consumers or any slowdown in this regard. Since my data processor only manipulates the data structure and stores the data locally in a file, it's not a big deal for either pattern. I prefer Kafka with publish-pull so I can decide when to retrieve and process the data.**
 
 #### Bonus 2
 Show how your container setup could be integrated into a container orchestration system (such as Kubernets) and how it would profit from this. Or show how you could replace some of the components with cloud-based offers and what changes/consideradtions come with this.
@@ -103,7 +107,7 @@ Show how your container setup could be integrated into a container orchestration
     <br />**ANSWER HARIS**<br /> See visualization below created with cProfile. I had to write a custom function to visualize everything since SnakeViz didn't work on my machine.<br />
 ![whatever](./part3/notebooks/output.png)
 <br />
-2. Did you detect bottlenecks? Describe and discuss 1-3 detected bottlenecks.<br /> **ANSWER HARIS** The bootlenecks are small groups of brokers with the same number of consumers. As the number of brokers decreases, Kafka throws out more consumers until you increase them again. The speed of the producer also decreases with fewer brokers. In contrast, producing and consuming is very stable with different numbers of producers and consumers. Kafka keeps everything in balance.
+1. Did you detect bottlenecks? Describe and discuss 1-3 detected bottlenecks.<br /> **ANSWER HARIS** The bootlenecks are small groups of brokers with a high number of consumers. As the number of brokers decreases, Kafka throws out more consumers until you increase the brokers again. The speed of the producer also decreases with fewer brokers. In contrast, producing and consuming is very stable with different numbers of producers and consumers for a reasonable number of brokers. Kafka keeps everything in balance.
 
 #### Bonus 3
 Mitigate or produce a bottleneck.
