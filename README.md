@@ -37,7 +37,7 @@ Note, the Docker Compose file available in the repository contains more containe
 1. Draw an overview of your application components including interfaces and data flows, for example using a component diagram. Answer the following questions and interpret your experiments or results: 
 ![Component Diagram](./part1/application-overview.drawio.png)
       * What are the tasks of the components?
-      <br >**ANSWER HARIS**<br />
+      <br />**ANSWER HARIS**<br />
       **There are two jupyter notebooks, which are producing and consuming data. Between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.**<br />
       **The Zookeeper is a centralized service which is used to maintain naming and configuration data. The service also keeps track of the status of the cluster nodes and the topics, partitions etc.**
       <br />
