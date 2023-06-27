@@ -65,7 +65,10 @@ Use other serializers/deserializers instead of JSON for the messages.
       * What is the difference compared to your choosen pattern?
        **ANSWER HARIS: The difference in my choosen pattern at Part 2 of this mini-challenge is, that you are a subcriber of a topic and always when a producer produces something you get the data immediately. Whereas with Kafka you have to pull the data, otherwise you get nothing**
       * What are the advantages and disadvantages of these patterns?
-       **ANSWER HARIS:<br /> Advantage of Publish-Pull Pattern:<br /> Messages are divided in partitions which allows the parallel consuming and producing of the messages<br /> Disadvantage of Publish-Pull Pattern:<br /> Do not support wildcard topic selection**  
+        <br /> Advantage of Publish-Pull Pattern:<br />
+        Messages are divided in partitions which allows the parallel consuming and producing of the messages<br />
+        <br /> Disadvantage of Publish-Pull Pattern:<br />
+        Do not support wildcard topic selection** <br />
         **Advantage of Publish-Subscribe Pattern:<br /> No complex programming is required to add or remove subscribers to a topic. Thus publish-subscribe systems provide a great deal of scalability and flexibility<br /> Disadvantage of Publish-Subscribe Pattern:<br /> Due to asynchronous interactions, testing is not a matter of making a request and then analyzing the result, thus testing can be challenging.**
       * How can you scale the two different approaches? What are ? Why? What are challenges to be considered?
         **ANSWER HARIS:<br /> For apache kafka you must add brokers to scale out or rebalance data across brokers which are being more heavily used. But pushing new Kafka broker into production can potentially impact performance because moving thousands of partitions to staging can take hours.<br />**
