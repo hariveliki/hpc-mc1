@@ -70,9 +70,9 @@ Use other serializers/deserializers instead of JSON for the messages.
         
         Advantages:
         
-        Decoupled Architecture: Publish-Subscribe enables a decoupled architecture where publishers and subscribers are independent of each other.
-        Scalability and Flexibility: Publish-Subscribe patterns support multiple subscribers for a single message, allowing for easy scalability.
-        Asynchronous Communication: Publishers and subscribers in Publish-Subscribe systems can operate asynchronously.
+        - Decoupled Architecture: Publish-Subscribe enables a decoupled architecture where publishers and subscribers are independent of each other.
+        - Scalability and Flexibility: Publish-Subscribe patterns support multiple subscribers for a single message, allowing for easy scalability.
+        - Asynchronous Communication: Publishers and subscribers in Publish-Subscribe systems can operate asynchronously.
         
         Disadvantages:
         
