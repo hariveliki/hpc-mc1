@@ -36,20 +36,15 @@ Note, the Docker Compose file available in the repository contains more containe
 
 1. Draw an overview of your application components including interfaces and data flows, for example using a component diagram. Answer the following questions and interpret your experiments or results: 
 ![Component Diagram](./part1/application-overview.drawio.png)
-      * What are the tasks of the components?
-      <br />**ANSWER HARIS**<br />
-      **There are two jupyter notebooks, which are producing and consuming data. Between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.**<br />
-      **The Zookeeper is a centralized service which is used to maintain naming and configuration data. The service also keeps track of the status of the cluster nodes and the topics, partitions etc.**
-      <br />
-      **The Kafka broker is a server in the cluster which receives and sends data. Each broker has a certain topic partition. All partitions are distributed across all brokers.**
-      <br />
-      * Which interfaces do the components have?
-      <br />**ANSWER HARIS**<br />
-      **The jupyter notebooks talk with the consumer and producer class from kafka with python code. For producing data you have to define the topic and the servers, and for consuming you provide the same information.**
-      * Why did you decide to use these components?
-      <br />**ANSWER HARIS**<br />
-      **Zookeeper: Is necessary in administrating the cluster. Kafka Broker: Is used to store the messages in topics and to send them to the consumers. Jupyter Notebooks: Are a convenient way of creating producers and consumering and debug per section if something doesnt work**
-      * Are there any other design decisions you have made? Which requirements (e.g. libraries, hardware, ...) does a component have?<br />**ANSWER HARIS**<br />
+      * What are the tasks of the components?<br />
+      **There are two jupyter notebooks, which are producing and consuming data. Between them there are three brokers and one zookeeper which manages the incoming and outgoing requests.** <br />
+      **The Zookeeper is a centralized service which is used to maintain naming and configuration data. The service also keeps track of the status of the cluster nodes and the topics, partitions etc.** <br />
+      **The Kafka broker is a server in the cluster which receives and sends data. Each broker has a certain topic partition. All partitions are distributed across all brokers.** <br />
+      * Which interfaces do the components have? <br />
+      **The jupyter notebooks talk with the consumer and producer class from kafka with python code. For producing data you have to define the topic and the servers, and for consuming you provide the same information.** <br />
+      * Why did you decide to use these components? <br />
+      **Zookeeper: Is necessary in administrating the cluster. Kafka Broker: Is used to store the messages in topics and to send them to the consumers. Jupyter Notebooks: Are a convenient way of creating producers and consumering and debug per section if something doesnt work** <br />
+      * Are there any other design decisions you have made? Which requirements (e.g. libraries, hardware, ...) does a component have? <br />
       **I inserted the data as json and consumed it with msg.value.get(). I would not need a separate identifier in Kafka as the data structure provides it.**
       **You need some specific requirements for kafka like kafka-python**
 
