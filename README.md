@@ -65,11 +65,9 @@ Use other serializers/deserializers instead of JSON for the messages.
       * What is the difference compared to your choosen pattern?
        **ANSWER HARIS: The difference in my choosen pattern at Part 2 of this mini-challenge is, that you are a subcriber of a topic and always when a producer produces something you get the data immediately. Whereas with Kafka you have to pull the data, otherwise you get nothing**
       * What are the advantages and disadvantages of these patterns?
-        <br /> Advantage of Publish-Pull Pattern:<br />
-        Messages are divided in partitions which allows the parallel consuming and producing of the messages<br />
-        <br /> Disadvantage of Publish-Pull Pattern:<br />
-        Do not support wildcard topic selection** <br />
-        **Advantage of Publish-Subscribe Pattern:<br /> No complex programming is required to add or remove subscribers to a topic. Thus publish-subscribe systems provide a great deal of scalability and flexibility<br /> Disadvantage of Publish-Subscribe Pattern:<br /> Due to asynchronous interactions, testing is not a matter of making a request and then analyzing the result, thus testing can be challenging.**
+      **Decoupled Architecture**: Publish-Subscribe enables a decoupled architecture where publishers and subscribers are independent of each other. Publishers send messages to topics without knowledge of
+      the subscribers, and subscribers receive messages from topics without knowledge of the publishers. This loose coupling allows for scalability and flexibility in adding or removing publishers and
+      subscribers.  **Scalability and Flexibility**: Publish-Subscribe patterns support multiple subscribers for a single message, allowing for easy scalability. Subscribers can dynamically join or leave the system, and the system can distribute messages to all interested subscribers efficiently. This pattern also supports broadcasting messages to multiple subscribers simultaneously.  **Asynchronous Communication**: Publishers and subscribers in Publish-Subscribe systems can operate asynchronously. Publishers can continue publishing messages without waiting for subscribers to receive them. This asynchronous nature enables high throughput and reduces latency, making it suitable for real-time and event-driven applications.
       * How can you scale the two different approaches? What are ? Why? What are challenges to be considered?
         **ANSWER HARIS:<br /> For apache kafka you must add brokers to scale out or rebalance data across brokers which are being more heavily used. But pushing new Kafka broker into production can potentially impact performance because moving thousands of partitions to staging can take hours.<br />**
         **For RabbitMQ and the publish-subscribe pattern you can split the queue into multiple queues and distribute them in the cluster to increase throughput.**
