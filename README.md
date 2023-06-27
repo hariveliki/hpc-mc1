@@ -76,21 +76,21 @@ Use other serializers/deserializers instead of JSON for the messages.
         
         Disadvantages:
         
-        Increased Complexity: Publish-Subscribe introduces additional complexity compared to simpler communication patterns.
-        Message Ordering: Publish-Subscribe does not guarantee strict message ordering across subscribers.
+        - Increased Complexity: Publish-Subscribe introduces additional complexity compared to simpler communication patterns.
+        - Message Ordering: Publish-Subscribe does not guarantee strict message ordering across subscribers.
 
         Publish-Pull Pattern:
 
         Advantages:
         
-        Control over Message Consumption: In the Publish-Pull pattern, consumers have explicit control over pulling messages from the system.
-        Guaranteed Message Delivery: With the pull-based approach, consumers explicitly request and acknowledge messages.
+        - Control over Message Consumption: In the Publish-Pull pattern, consumers have explicit control over pulling messages from the system.
+        - Guaranteed Message Delivery: With the pull-based approach, consumers explicitly request and acknowledge messages.
         
         Disadvantages:
         
-        Increased Latency: Publish-Pull introduces additional latency compared to Publish-Subscribe.
-        Complexity in Consumer Logic: In Publish-Pull, consumers need to handle message retrieval, acknowledgment, and error handling explicitly.
-        Scalability Challenges: Scaling consumers in a Publish-Pull pattern can be more complex compared to Publish-Subscribe.
+        - Increased Latency: Publish-Pull introduces additional latency compared to Publish-Subscribe.
+        - Complexity in Consumer Logic: In Publish-Pull, consumers need to handle message retrieval, acknowledgment, and error handling explicitly.
+        - Scalability Challenges: Scaling consumers in a Publish-Pull pattern can be more complex compared to Publish-Subscribe.
         
       * How can you scale the two different approaches? What are ? Why? What are challenges to be considered?
         **ANSWER HARIS:<br /> For apache kafka you must add brokers to scale out or rebalance data across brokers which are being more heavily used. But pushing new Kafka broker into production can potentially impact performance because moving thousands of partitions to staging can take hours.<br />**
